@@ -20,7 +20,7 @@ def findsqares(limitNum):
                     print("value 1: "+str(sqareValues[k]))
                     print("value 2: "+str(sqareValues[j]))
                     print("value 3: "+str(sqareValues[i]))
-                    return (sqareValues[i]*sqareValues[j]*sqareValues)
+                    return (sqareValues[i]*sqareValues[j]*sqareValues[k])
                 elif(total < limitNum):
                     continue
                 else:
