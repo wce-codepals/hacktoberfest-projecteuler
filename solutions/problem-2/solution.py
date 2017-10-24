@@ -12,12 +12,12 @@ def fibonacci_evens(maxnumber):
     even_total = 0
     # while the result is less or equal to your maximum defined number
     while(c <= maxnumber):
-        # the result is equal to the previous 2 values summed together
-        c = a + b
         # if result is even
         if(c % 2 == 0):
             # add result to previous even numbers total
             even_total = c + even_total
+        # the result is equal to the previous 2 values summed together
+        c = a + b
         # continue moving the sequence forward
         a = b
         b = c
