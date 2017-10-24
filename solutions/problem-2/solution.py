@@ -22,7 +22,7 @@ def fibonacci_evens(maxnumber):
         a = b
         b = c
     # Print the even_total converted to a string to prevent error
-    print "The total evens in this sequence: " + str(even_total)
+    print "The sum of evens in this sequence: " + str(even_total)
 
 def main():
     print "Please input max length of sequence:"
