@@ -1,3 +1,7 @@
+"""
+This solution was got from https://codereview.stackexchange.com/a/143898
+"""
+
 from fractions import gcd
 from itertools import product
 
