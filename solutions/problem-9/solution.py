@@ -10,17 +10,17 @@ def storeSqareValues(limitNum):
     return sqrevalus
 
 def findsqares(limitNum):
-    value = storeSqareValues(limitNum)
-    lengtharr = len(value)
+    sqareValues = storeSqareValues(limitNum)
+    lengtharr = len(sqareValues)
     for i in range(lengtharr-1,1,-1):
         for j in range(lengtharr):
             for k in range(1,lengtharr):
-                total = value[i] + value[j] + value[k]
+                total = sqareValues[i] + sqareValues[j] + sqareValues[k]
                 if(total == limitNum):
-                    print("value 1: "+str(value[k]))
-                    print("value 2: "+str(value[j]))
-                    print("value 3: "+str(value[i]))
-                    return (value[i]*value[j]*value[k])
+                    print("value 1: "+str(sqareValues[k]))
+                    print("value 2: "+str(sqareValues[j]))
+                    print("value 3: "+str(sqareValues[i]))
+                    return (sqareValues[i]*sqareValues[j]*sqareValues)
                 elif(total < limitNum):
                     continue
                 else:
