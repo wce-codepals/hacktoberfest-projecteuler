@@ -17,3 +17,7 @@
 /solutions
   /problem-3
     /solution.py
+  /problem-5
+    /solution.py
+  /problem-6
+    /solution.py
