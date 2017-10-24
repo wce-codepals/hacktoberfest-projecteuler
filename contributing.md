@@ -9,7 +9,11 @@
 - PR format on adding solution should be "Solution Added for PROBLEM-NO in LANGUAGE-NAME lanaguage"
 
 
-#### Project struture is 
+#### Project struture is
 * /solutions
   * /problem-no
     * /filename.extension
+
+/solutions
+  /problem-3
+    /solution.py
