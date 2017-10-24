@@ -3,7 +3,7 @@ class SumFinder():
         r = 0
         while number:
            r, number = r + number % 10, number // 10
-        print(r)
+        print(r[:10])
         
 # Initiate the class
 number = 37107287533902102798797998220837590246510135740250
