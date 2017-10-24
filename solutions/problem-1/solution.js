@@ -1,15 +1,10 @@
-function multiples() 
-{
-var sum = 0, i = 1000;
+const sumOfMultiplesOfThreeAndFive = n => {
+  const sum = 0;
+  for(let i = 1; i < n; i++) {
+    if (i % 3 == 0 || i % 5 == 0)
+      sum += i;
+  }
+  return sum;
+};
 
-while (i --) 
-{
-  if ( i % 3 === 0 || i % 5 === 0 ) 
-   {
-    sum += i;
-   }
- }
-
-return sum;
-}
-console.log(multiples(1000))
+console.log(sumOfMultiplesOfThreeAndFive(1000));
