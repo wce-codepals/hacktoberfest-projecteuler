@@ -9,7 +9,7 @@ def find_solution(step):
     while True:
         if all(step % n == 0 for n in check_list):
             return step
-        step = step + 1
+        step = step + step
 
 if __name__ == '__main__':
     solution = find_solution(20)
