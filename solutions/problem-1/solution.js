@@ -7,7 +7,7 @@ function sum() {
         //checking if the number is a factor of 3 or 5
         if (i % 3 === 0 || i % 5 === 0) {
             //adding the number to sum if it is
-            sum += 0;
+            sum += i;
         }
         //returning the sum
         return sum;
