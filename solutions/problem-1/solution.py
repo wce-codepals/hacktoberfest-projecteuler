@@ -9,14 +9,8 @@ Sum(3 * 1..QT_MULTIPLES), where we can do:
 """
 
 
-def sum_multiples(number, upper_bound):
-    qt_divisors = int(upper_bound / number)
-    s = number * (qt_divisors * (qt_divisors + 1)) / 2
-    return int(s)
-
-
-answer = sum_multiples(3, 999) + \
-         sum_multiples(5, 999) - \
-         sum_multiples(15, 999)
-
-print(answer)
+total_sum = 0
+for i in range(1, 1000):
+    if (i % 3 == 0 or i % 5 == 0):
+        total_sum = total_sum + i
+print total_sum  
