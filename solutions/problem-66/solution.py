@@ -44,7 +44,6 @@ def chakravala(N):
   assert gcd(a, b) == 1
 
   while k != 1:
-  # while k not in [1, -1, 2, -2, 4, -4]:
     # now we compose this solution with the trivial tuple (m, 1, m^2 - N) to get
     # (a*m + N*b, a + b*m, k*(m^2 - N))
     # we scale this down by k to get
@@ -70,5 +69,6 @@ def chakravala(N):
   # print("SOLUTION {} {}". format(a, b))
   return (a, b)
 
+# skip over square values of N, because they don't have solutions
 _, result = max([(chakravala(N), N) for N in range(2, 1000+1) if isnotsquare(N)])
 print(result)
