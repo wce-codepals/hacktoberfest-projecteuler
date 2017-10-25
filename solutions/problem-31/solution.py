@@ -14,10 +14,10 @@ def findSum(coins, n):
 
     for i in range(1, n+1):
         for j in range(coinLen):
-            # Count of solutions including S[j]
+            # Count of solutions including coins[j]
             x = table[i - coins[j]][j] if i-coins[j] >= 0 else 0
 
-            # Count of solutions excluding S[j]
+            # Count of solutions excluding coins[j]
             y = table[i][j-1] if j >= 1 else 0
 
             # total count
