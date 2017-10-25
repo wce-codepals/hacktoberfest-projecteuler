@@ -7,12 +7,12 @@ import java.math.BigInteger;
 
 class Solution
 {
+	//calculates nCk
 	static BigInteger choose(int n,int k){
-		// System.out.println("hello");
+		
 		if(k>n-k) k = n-k;
 		BigInteger result = new BigInteger("1"); 
-		for(int i=1;i<=k;i++){
-		// System.out.println(i);	
+		for(int i=1;i<=k;i++){	
 			result = result.multiply(BigInteger.valueOf(n-k+i));
 			result = result.divide(BigInteger.valueOf(i));
 		}
@@ -20,7 +20,8 @@ class Solution
 	}
 	public static void main (String[] args) throws java.lang.Exception
 	{
-		// your code goes here
+		// n and m denote the dimensions of the grid.
+		// the number of routes equals to nCk i.e. choose k from n.
 		int n,m;
 		n=20;
 		m=20;
