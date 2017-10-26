@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import sys
-file=open(sys.argv[1],'r')		#opens file
+file=open(sys.argv[1],'r')		#takes as an argument from the terminal, the file triangle.txt
 textfile=file.read().splitlines()	#reads lines from file without \n break line character, and converts into list
 triangle=[]
 count_lines=0
