@@ -5,6 +5,8 @@ This repo contains solutions for projecteuler problems. Specially created for ne
   <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/MWNDkKEDzx7zp9Ca3HcRv1HG/moghya/hacktoberfest-projecteuler.svg' />
 </a>
 
+Kind request to everyone that before sending any pull request test your solutions on <a href="https://projecteuler.net">projecteuler.net</a>.<br>
+
 ## List of Problems
 - Problem #1 [Multiples of 3 and 5](https://projecteuler.net/problem=1)   ||   [solutions](https://github.com/moghya/hacktoberfest-projecteuler/tree/master/solutions/problem-1)
 - Problem #2 [Even Fibonacci numbers](https://projecteuler.net/problem=2)   ||   [solutions](https://github.com/moghya/hacktoberfest-projecteuler/tree/master/solutions/problem-2)
