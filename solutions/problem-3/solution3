@@ -1,0 +1,12 @@
+def check_palindrome(int i):
+	if (i%10 == i%10000 && i%100 == i%1000):
+		return 1
+	else
+		return 0
+
+for x in range(100, 999):
+	for y in range(100, 999):
+		if check_palindrome(x*y):
+			largest=x*y
+
+print largest
