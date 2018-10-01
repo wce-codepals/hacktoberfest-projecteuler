@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication81
+{
+    class Program
+    {
+        static long sumdiv(long n)
+        {
+            long a = 1,sum=0;
+            while (a <= (long)Math.Sqrt(n)) { if (n % a == 0)sum += (a + n / a); a++; }
+            if ((long)Math.Sqrt(n) * (long)Math.Sqrt(n) == n) n -=(long) Math.Sqrt(n);
+            return sum-n;
+        }
+        static long mission()
+        {
+            long n = 3,sum=0;
+            while (n <10000 )
+            {
+                if (n == sumdiv(sumdiv(n)) && n!=sumdiv(n) ) { sum += (n + sumdiv(n)); Console.WriteLine("n:{0},sumdiv:{1}", n, sumdiv(n)); }
+                n++;
+            }
+            return sum;
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine(mission()/2);
+        }
+    }
+}
