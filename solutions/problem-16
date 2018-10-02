@@ -1,0 +1,38 @@
+def Get_List(size):
+    number_list = []
+
+    for number in range(0, size):
+        number_list.append(int(input()))
+
+    return number_list
+
+
+    
+def N_Squared(number):
+    number_squared = 2
+    sum = 0
+    
+    for i in range(0, number - 1):
+        number_squared = number_squared * 2
+    
+    number_list = [int(d) for d in str(number_squared)]
+    
+    for i in number_list:
+        sum = sum + int(i)
+    
+    print(sum)
+    
+    
+def main():
+    number_list = []
+    final_result = []
+    
+    number_count = int(input())
+
+    
+    number_list = Get_List(number_count)
+    
+    for i in range(0, number_count):
+        final_result = N_Squared(number_list[i])
+    
+main()
