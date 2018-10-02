@@ -1,25 +1,19 @@
-function solution()
- {
-    var fibno = [ 1, 2 ], sum = 0;
+var fib = function (n) {
+    if (n < 1) return 1;
+    return fib(n - 1) + fib(n - 2);
+}
 
- function cal(arr )
-  {
-   return arr[ arr.length - 1 ] + arr[ arr.length - 2 ];
- }
-
-  while ( fibno[ fibno.length - 1 ] < 4e+6 )
-    {
-      fibno.push( cal(fibno) );
+var fibWithLimit = function (limit) {
+    var sum = 0;
+    var currentNumber = 0;
+    var fibVal = 0;
+    while (true) {
+        fibVal = fib(currentNumber);
+        if (fibVal >= limit) break;
+        if (fibVal % 2 == 0) sum += fibVal;
+        currentNumber++;
     }
-
-    fibno.forEach( function(n) 
-     {
-        if ( n % 2 === 0 )
-        {
-            sum += n;
-        }
-    });
     return sum;
 }
 
-console.log(solution())
+console.log(fibWithLimit(4000000));
