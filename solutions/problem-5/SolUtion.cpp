@@ -28,7 +28,7 @@ int main()
     cout<<endl;
   
     cout<<"Smallest number divisible by each of the numbers from 1 to 20 without any remainder "; 
-    findlcm(arr2[],10);
+    findlcm(arr2[],20);
     
     return 0; 
 } 
