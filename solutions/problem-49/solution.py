@@ -1,5 +1,5 @@
 import itertools
-
+# m
 def is_prime(x):
     return all(x % i for i in range(2, x))
 
