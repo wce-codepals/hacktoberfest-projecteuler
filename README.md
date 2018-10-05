@@ -1,4 +1,4 @@
-# hacktoberfest-projecteuler
+﻿# hacktoberfest-projecteuler
 This repo contains solutions for projecteuler problems. Specially created for newcomers to contribute as part of Hacktoberfest Challenge.
 
 <a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/MWNDkKEDzx7zp9Ca3HcRv1HG/moghya/hacktoberfest-projecteuler'>
