@@ -16,12 +16,8 @@ function calc($limit) {
 }
 
 function isPrime($num) {
-    if ($num % 2 === 0) {
-        return false;
-    }
-
-
     $root = floor(sqrt($num));
+
     for ($var = 3; $var <= $root; $var += 2) {
         if ($num % $var === 0) {
             return false;
