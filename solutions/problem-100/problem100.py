@@ -14,10 +14,17 @@ r1 = 1000000000
 
 r2 = 1000000000
 
-for n in range(1, r1):
-    for n2 in range(1, r2):
-        if ((n / (n + n2)) * (n - 1) / (n + n2 - 1)) == 0.5:
-            if n + n2 >= 1000000000000:
-                print(n, n2)
-                break
+# for n in range(1, r1):
+#     for n2 in range(1, r2):
+#         if ((n / (n + n2)) * (n - 1) / (n + n2 - 1)) == 0.5:
+#             if n + n2 >= 1000000000000:
+#                 print(n, n2)
+#                 break
+
+
+
+
+
+
+
 
