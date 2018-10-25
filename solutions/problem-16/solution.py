@@ -1,0 +1,11 @@
+t=int(raw_input())
+i=0
+while(i<t):
+    n=long(raw_input())
+    k=long(pow(2,n))
+    sum=0
+    while(k):
+        sum+=k%10
+        k/=10
+    print(sum)
+    i+=1
