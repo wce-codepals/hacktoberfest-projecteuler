@@ -1,0 +1,19 @@
+n=int(raw_input())
+i=10
+s=0
+while(i<n):
+    p=i
+    s1=0
+    while(p):
+        q=p%10
+        j=1
+        k=1
+        while(j<=q):
+            k=k*j
+            j+=1
+        s1+=k
+        p=p/10
+    if(s1%i==0):
+        s+=i
+    i+=1
+print(s)
