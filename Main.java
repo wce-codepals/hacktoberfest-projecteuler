@@ -1,14 +1,19 @@
 class Main {
   public static void main(String[] args) {
-    int sum=0, a, b;
-    for (a=3; a<1000; a=a+3)
-    {
-      sum=sum+a;
+   
+    long i,a=2520,b=0;
+    do{
+      for (i=1;i<=20;i++)
+      {
+        if (a%i==0)
+        b=b+1;
+      }
+      a++;
+      if (b==20)
+      break;
+    }while(true);
+     System.out.print("The smallest number which is divisible by all numbers from 1 to 20:"+a);
     }
-    for (b=5; b<1000; b=b+5)
-    {
-      sum=sum+b;
-    }
-    System.out.print("the sum of all the multiples of 3 or 5 below 1000:"+sum);
+
+   
   }
-}
