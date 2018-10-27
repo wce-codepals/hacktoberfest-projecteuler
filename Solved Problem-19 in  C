@@ -1,0 +1,40 @@
+#include<stdio.h>
+int isleap(int);
+void main()
+{
+ int year,ndays=0,day,i,count=0;
+ int leap[12]={31,29,31,30,31,30,31,31,30,31,30,31};
+ int notleap[12]={31,28,31,30,31,30,31,31,30,31,30,31};
+ 
+/*1st january 1901 was tuesday*/
+
+for(year=1901;year<=2000;year++)
+{
+   for(i=0;i<=11;i++)
+   { 
+     if(isleap(year))
+     { printf("leap\n");
+       ndays+=leap[i];
+     }
+     else 
+      ndays+=notleap[i];
+        
+    day=ndays%7;
+    if(day==5) 
+      count++;
+   }
+}
+printf("%d",count);
+}
+
+int isleap(int year)
+{  if(year%4==0 )  
+  {
+  if (year%100==0 && year%400!=0)
+  return 0;
+  else
+  return 1; 
+  }
+  else
+  return 0;
+}
