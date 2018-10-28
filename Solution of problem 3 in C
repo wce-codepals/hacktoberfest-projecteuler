@@ -1,0 +1,39 @@
+#include<stdio.h>
+int isprime(int);
+void main()
+{
+ long int num,div,prime[1000],primef,max;
+ int i=0,j;  
+     for(div=2;div<600851475143;div++)
+  {
+      if(600851475143%div==0)
+     { 
+        if(isprime(div)) 
+       { primef++;
+         prime[i]=div;
+         i++;
+       }  
+     }
+   }
+printf("%d",i);
+max=0;
+for(j=0;j<i;j++)
+{  
+  if(prime[j]>max)
+  max=prime[j];
+}
+printf("%ld",max);
+}
+int isprime( int n)
+{
+  int k,count=0;
+  for(k=2;k<n;k++)
+  {
+    if(n%k==0)
+     count++;
+  }
+if(count==0)
+return 1;
+else
+return 0;
+}
