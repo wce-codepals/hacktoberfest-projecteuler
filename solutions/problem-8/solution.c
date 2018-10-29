@@ -22,7 +22,7 @@ int main()
 	     		if(p>max)
 		 		max=p;
 	 	}
-            	printf("%Ld\n",max);
+            	printf("greatest product value  of thirteen adjacent digits in the 1000-digit number is %Ld\n",max);
         }
     return 0;
 }
