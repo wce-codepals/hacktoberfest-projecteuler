@@ -14,4 +14,4 @@ def main_prime(num):
         current_num+=1
     return ap[-1]
 
-print(main_prime(10))  #put 10001 instead of 10
+print(main_prime(10001))  
