@@ -1,8 +1,4 @@
-def sum_of_squares(n):
-  return (n * (n + 1) * (2 * n + 1) ) / 6
+def sq_diff(num):
+    return sum(range(1,num+1))**2-sum([i**2 for i in range(1,num+1)])
 
-def square_sum(n):
-  return (n * (n + 1) / 2) ** 2
-  
-print(square_sum(100) - sum_of_squares(100))
-  
+print(sq_diff(100))
