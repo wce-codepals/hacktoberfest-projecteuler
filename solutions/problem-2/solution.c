@@ -9,6 +9,6 @@ int main(void)
     zx1 = zx2;
     zx2 = zx3;
   }
-  printf("%u\n", zsum);
+  printf("the sum of even valued terms of fibonacci series till 4 million is %u\n", zsum);
   return 0;
 }
