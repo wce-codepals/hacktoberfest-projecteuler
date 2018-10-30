@@ -1,0 +1,15 @@
+#include<stdio.h>
+main()
+{
+ int a=0,b=0,i,diff;
+ for(i=1;i<=100;i++)
+   {
+    a=a+i*i;
+   }
+ for(i=1;i<=100;i++)
+   {
+    b=b+i;
+   }
+ diff=(b*b)-a;
+ printf("Difference of sum of squares of first 100 natural numbers and square of sum of first 100 natural numbers is %d\n",diff);
+}
