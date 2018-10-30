@@ -15,15 +15,31 @@
 # Find the value of d < 1000 for which 1/d contains the longest recurring cycle in its decimal fraction part.
 #
 # =================================================================================================================================================
-#
-
-from decimal import Decimal
 
 def determine_cycle(denominator):
-    return (Decimal( 1 / denominator))
+    cycleLength = 0
+    for d in range(denominator, 1, -1):
+        if (cycleLength >= d):
+            break
+
+        remainders = [0]*d        
+        
+        rem,dig = 1,0
+
+        while (remainders[rem] == 0 and rem != 0):
+            remainders[rem] = dig
+            rem = 10 * rem
+            rem = rem % d
+            dig = dig + 1
+           
+
+        if (dig - remainders[rem]) > cycleLength:
+            cycleLength = (dig - remainders[rem])
+            
+    return [dig, cycleLength]
 
 def main():
-    for i in range(1, 100):
-        print(determine_cycle(i))
+    longest_cycle = determine_cycle(1000)
+    print("The Denominator with the longest reciprocating cycle is ", longest_cycle[0], " with a cycle length of ", longest_cycle[1])
 
 main()
