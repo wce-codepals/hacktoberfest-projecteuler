@@ -26,23 +26,22 @@
 
 def determine_cycle(denominator):
     cycleLength = 0
-    for d in range(denominator, 1, -1):
-        if (cycleLength >= d):
+    for d in range(denominator, 1, -1): # Start at 1000 and go down
+        if (cycleLength >= d): # stop after finding the first(highest) denominator with a repetend
             break
 
-        remainders = [0]*d        
+        remainders = [0]*d # Initialize a list to store the remainders       
         
         rem,dig = 1,0
 
-        while (remainders[rem] == 0 and rem != 0):
+        while (remainders[rem] == 0 and rem != 0): # This while loop terminates when the decimal representation terminates or an already assigned index is accessed
             remainders[rem] = dig
-            rem = 10 * rem
-            rem = rem % d
-            dig = dig + 1
-           
-
-        if (dig - remainders[rem]) > cycleLength:
-            cycleLength = (dig - remainders[rem])
+            rem = 10 * rem # the *10 step in long division
+            rem = rem % d # find the remainder
+            dig = dig + 1 # step through the decimal representation
+        
+        # store the cycle length so we have it when the for loop breaks above
+        cycleLength = (dig - remainders[rem])
             
     return [dig, cycleLength]
 
