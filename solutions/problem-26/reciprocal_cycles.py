@@ -16,6 +16,14 @@
 #
 # =================================================================================================================================================
 
+# General Solution Notes
+# The solution relies on the fact that every fraction's decimal representation can be computed by repetitive long division.
+# In long division, if the numberator is less than the denominator (as is the case for a unit fraction), the remainder is multiplied by 10
+# until a whole number is yielded. This solution fills a list with remainders until the algorithm re-reaches the first number in the repetend.
+# We can also rely on Lagrange's Theorem to dictate that the order of any element of a group divides the order of the group, confirming
+# the possible length of the repetend will increase as the denominator increases. Since this means the highest denominator below 1000 will
+# also have the longest repetend, we can count down from 1000 and stop at the first repetend we find.
+
 def determine_cycle(denominator):
     cycleLength = 0
     for d in range(denominator, 1, -1):
