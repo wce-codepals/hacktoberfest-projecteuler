@@ -1,0 +1,15 @@
+count=0
+for i in range (1,10000000):
+    k=0
+    while (k==0):
+        sum=0
+        while(i>0):
+            sum=sum+((i%10)*(i%10))
+            i=int(i/10)
+        i=sum
+        if (i==1):
+            k=1
+        if (i==89):
+            k=1
+            count=count+1
+print(count)
