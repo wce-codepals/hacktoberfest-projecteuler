@@ -22,7 +22,7 @@ int main()
 	     		if(p>max)
 		 		max=p;
 	 	}
-            	printf("%Ld\n",max);
+            	printf("Largest product in the series is %Ld\n",max);
         }
     return 0;
 }
