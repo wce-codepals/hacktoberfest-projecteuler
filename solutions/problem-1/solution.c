@@ -8,13 +8,10 @@ int main(void)
     if (i % 3 == 0) {
       m1 += i;
     }
-    if (i % 5 == 0) {
+        else if (i % 5 == 0) {
       m2 += i;
     }
-    if (i % 15 == 0) {
-      m3 += i;
-  }
 }
-printf("%d\n", m1 + m2 - m3);
+printf("%d\n", m1 + m2);
   return 0;
 }
