@@ -34,7 +34,7 @@ for ( let i = 2; i <= upperLimit; i++ ) {
 let stopComputing = false;
 let currentFactor = 2;
 let i = 0;
-
+//start while loop
 while ( !stopComputing ) {
 	i = 2 * currentFactor;
 
@@ -60,7 +60,7 @@ while ( !stopComputing ) {
 } // end of outer while loop
 
 
-//  Find nth unmarked number in the array, which is the nth prime
+//  Find nth unmarked number in the array, which is the nth prime number
 let answerIndex;
 let count = 0;
 
