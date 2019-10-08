@@ -22,7 +22,5 @@ trianglen=1
 while (divisorsThroughPrimeFactorDecomps(trianglen))<500:
 	n+=1
 	trianglen+=n
-	if n%10==0:
-		print(f"{n}, {trianglen}")
 
 print (trianglen)
