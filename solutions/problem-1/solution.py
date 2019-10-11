@@ -7,12 +7,12 @@ To get the sum, we use a ArithmeticProgression
 Sum(3 * 1..QT_MULTIPLES), where we can do:
 3 * SUM(1..QT_MULTIPLES)
 """
+from __future__ import division  # imported for backward division compatibility for python2
 
 
 def sum_multiples(number, upper_bound):
-    qt_divisors = int(upper_bound / number)
-    s = number * (qt_divisors * (qt_divisors + 1)) / 2
-    return int(s)
+    qt_divisors = upper_bound // number
+    return number * (qt_divisors * (qt_divisors + 1)) // 2  # operator `//` returns integer/floor value only
 
 
 answer = sum_multiples(3, 999) + \
