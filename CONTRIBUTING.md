@@ -6,7 +6,7 @@
 - Implement Solution for any project euler problem in any language of your choice.
 - Implement modulor solutions and try to add comments in code for better understanding of it.
 - Read Style Guides of Language you're using.
-- PR format on adding solution should be "Solution Added for PROBLEM-NO in LANGUAGE-NAME lanaguage"
+- PR Title on adding solution should be "Solution Added for PROBLEM-NO in LANGUAGE-NAME lanaguage"
 
 
 #### Project struture is 
