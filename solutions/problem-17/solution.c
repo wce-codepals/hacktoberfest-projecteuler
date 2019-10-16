@@ -167,7 +167,8 @@ void num(long long a)
         
     }
 }
-int main() {
+int main() 
+{
     int t,i,j;
     long long n;
     scanf("%d",&t);
