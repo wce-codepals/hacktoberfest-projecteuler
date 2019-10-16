@@ -24,8 +24,9 @@
 using namespace std;
 
 
-int main(){
-   	double t,a,b,c,n;
+int main()
+{
+    double t,a,b,c,n;
     long long max;
     long long x;
     cin >> t;
@@ -40,9 +41,9 @@ int main(){
             x=b;
             if(x==b)
             {    
-            c=n-a-b;
-            if(c>b&&b>a&&a*b*c>max)
-                        max=a*b*c;
+                c=n-a-b;
+                if(c>b&&b>a&&a*b*c>max)
+                   max=a*b*c;
             }
         }
         cout<<max<<endl;
