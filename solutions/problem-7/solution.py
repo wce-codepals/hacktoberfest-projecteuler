@@ -14,4 +14,4 @@ while(val!=10001):
         if flag == True:
             val += 1
 
-print(count)
+print(count)#output
