@@ -5,6 +5,7 @@ This solution was got from https://codereview.stackexchange.com/a/143898
 from fractions import gcd
 from itertools import product
 
+
 def polygon_area(corners):
     """Return the area of the polygon with the given vertices."""
     n = len(corners)
@@ -16,7 +17,10 @@ def polygon_area(corners):
     area = abs(area) / 2.0
     return area
 
+
 _memo = {}
+
+
 def lattice(p1, p2):
     """Return the number of lattice points on the line from p1 to p2."""
     t = abs(p2[0] - p1[0]), abs(p2[1] - p1[1])
@@ -25,12 +29,14 @@ def lattice(p1, p2):
         _memo[t] = g
     return _memo[t]
 
+
 def boundary(p1, p2, p3, p4):
     """Return the number of lattice points on the boundary of the
     quadrilateral with vertices p1, p2, p3, p4.
 
     """
     return lattice(p1, p2) + lattice(p2, p3) + lattice(p3, p4) + lattice(p4, p1) - 4
+
 
 def interior(p1, p2, p3, p4):
     """Return the number of lattice points in the interior of the
@@ -40,8 +46,9 @@ def interior(p1, p2, p3, p4):
     corners = [p1, p2, p3, p4]
     A = polygon_area(corners)
     B = boundary(p1, p2, p3, p4)
-    I = A - B/2 + 1
+    I = A - B / 2 + 1
     return I
+
 
 def problem504(m=100):
     """Return the number of quadrilaterals with vertices lying at lattice
