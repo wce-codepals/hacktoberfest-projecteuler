@@ -1,3 +1,6 @@
+#!/bin/python3
+
+import sys
 def largest_prime_factor(n):
     i = 2
     while i * i <= n:
@@ -6,3 +9,8 @@ def largest_prime_factor(n):
         else:
             n //= i
     return n
+
+t = int(input().strip())
+for a0 in range(t):
+    n = int(input().strip())
+    print(largest_prime_factor(n))
