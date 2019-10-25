@@ -1,0 +1,25 @@
+def problem40():
+    """
+    http://projecteuler.net/problem=40
+    An irrational decimal fraction is created by concatenating the positive integers:
+    0.123456789101112131415161718192021...
+    It can be seen that the 12th digit of the fractional part is 1.
+    If dn represents the nth digit of the fractional part, find the value of the following expression.
+    d1 x d10 x d100 x d1000 x d10000 x d100000 x d1000000
+    """
+    global _part; global _int
+    _part = ''
+    _int = 0
+
+    def dn(digit):
+        global _part; global _int
+        while(len(_part) <= digit):
+            _int += 1
+            _part = '{}{}'.format(_part, _int)
+        print 'dn({}) is {}'.format(digit, int(_part[digit-1]))
+        return int(_part[digit-1])
+
+    assert dn(2) == 2, '{} != 2'.format(dn(2))
+    assert dn(12) == 1, '{} != 1'.format(dn(12))
+
+    return dn(1) * dn(10) * dn(100) * dn(1000) * dn(10000) * dn(100000) * dn(1000000)
