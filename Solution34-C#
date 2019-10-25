@@ -1,0 +1,10 @@
+private int factorial(int x) {
+    if (x == 0) {
+        return 1;
+    }
+    int y = x;
+    for (int i = 1; i < x; i++) {
+        y *= i;
+    }
+    return y;
+}
