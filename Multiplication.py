@@ -5,3 +5,4 @@ try:
   print(c)
 except:
   pass
+#Multiplication program
