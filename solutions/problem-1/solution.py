@@ -1,22 +1,30 @@
-"""
-Basically, we're getting all multiples from 3 and 5, and
-reducing the multiples from 15 (becase otherwise we'd double
-count)
-To get how many multiples exists, a simple division is enough
-To get the sum, we use a ArithmeticProgression
-Sum(3 * 1..QT_MULTIPLES), where we can do:
-3 * SUM(1..QT_MULTIPLES)
+
 """
 
+Problem 1:
 
-def sum_multiples(number, upper_bound):
-    qt_divisors = int(upper_bound / number)
-    s = number * (qt_divisors * (qt_divisors + 1)) / 2
-    return int(s)
+We have to find the sum of all the multiples of 3 or 5 below 1000.
 
 
-answer = sum_multiples(3, 999) + \
-         sum_multiples(5, 999) - \
-         sum_multiples(15, 999)
 
-print(answer)
+"""
+
+# Simple version with list comprehension
+
+def find_sum_of_multiples(n):
+
+    multiples = [num for num in range(n) if num % 3 == 0 or num % 5 == 0]
+
+    return sum(multiples)
+
+print(find_sum_of_multiples(1000))
+
+# Faster version with generators
+
+def find_sum_of_multiples(n):
+
+    sum_of_multiples = sum( num for num in range(n) if num % 3 == 0 or num % 5 == 0 )
+
+    return sum_of_multiples
+
+print(find_sum_of_multiples(1000))
