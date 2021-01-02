@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<math.h>
+main()
+ {
+  int n,rem,sum=0;
+  n=pow(2,1000);
+  while(n!=0)
+    {
+     rem=n%10;
+     sum+=rem;
+     n=n/10;
+     }
+  printf("Sum of the digits in 2 to the power 1000 is %d\n",sum);
+ }
