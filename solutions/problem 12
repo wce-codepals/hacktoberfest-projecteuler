@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication78
+{
+    class Program
+    {
+        static long trignumrec(long n)
+        {
+            if (n == 1) return 1;
+            return trignumrec(n)+(n+1);
+        }
+        static long trignum(long n)
+        {
+            long ans = 0,i=1;
+            while (i <= n) { ans += i; i++; }
+            return ans;
+        }
+        static long divnum(long n)
+        {
+            long i = 1,count=0;
+            while (i <=(long)Math.Sqrt(n)) { if (n % i == 0) count += 2; i++; }
+            if ((long)Math.Sqrt(n) * (long)Math.Sqrt(n) == n) count--;
+            return count;
+        }
+        static long overadiv(long a)
+        {
+            long n = 1;
+            while (divnum(trignum(n)) < a) {n++;Console.WriteLine("divum:{0},n:{1}",divnum(trignum(n)),n);}
+            return n;
+        }
+        static void Main(string[] args)
+        {
+          //  Console.WriteLine(overadiv(3));
+            Console.WriteLine(trignum(overadiv(500)));
+            //Console.WriteLine(divnum(trignum(192)));
+           
+        }
+    }
+}
