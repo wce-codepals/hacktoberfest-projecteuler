@@ -1,23 +1,12 @@
-from math import *
-def is_prime(num):
-	"""Returns True if the number is prime
-	else False."""
-	if num == 0 or num == 1:
-		return False
-	for x in range(2, num):
-		if num % x == 0:
-			return False
-	else:
-		return True
+import math
 
-def main():
-	max_divisor = 20
-	result = 1
-	prime_nos = prime_nos = filter(is_prime, range(1, 20))
-	for prime in prime_nos:
-		a = floor(log(max_divisor)/log(prime))
-		result = result * pow(prime, a)
-	print result
+# In short we have to find the lcm
 
-if __name__ == '__main__':
-	main()
+def Smallest_multiple(array):
+    lcm=array[0]
+    for i in array[1:]:
+        lcm = int( lcm*i/math.gcd(lcm,i) )    # gcd is greatest common divisor
+    return lcm
+
+print(Smallest_multiple(range(1,11)))
+
