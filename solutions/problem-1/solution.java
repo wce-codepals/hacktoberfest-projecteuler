@@ -1,14 +1,15 @@
-public final class multiples{  
-  
-    public static void main(String[] args) {  
-        System.out.println(multiples().run());  
-    }  
-    public String run() {  
-        int sum = 0;  
-        for (int i = 0; i < 1000; i++) {  
-            if (i % 5 == 0 || i % 3 == 0)  
-                sum += i;  
-        }  
-        return Integer.toString(sum);  
-    }  
+public class test {
+
+	public static void main(String[] args) {
+		int num = 1;
+		int total = 0;
+		while (num < 1000) {
+			if (num % 3 == 0 || num % 5 == 0) {
+				total += num;
+			}
+			num++;
+		}
+		System.out.println(total);
+	}
+
 }
