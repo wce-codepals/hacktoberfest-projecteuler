@@ -1,0 +1,46 @@
+
+using System; 
+using System.Collections; 
+class FactorialDigitSum{ 
+ 
+static ArrayList v=new ArrayList(); 
+static void multiply(int x)  
+{  
+    int carry = 0;  
+    int size = v.Count;  
+    for (int i = 0 ; i < size ; i++)  
+    {  
+         
+        int res = carry + (int)v[i] * x;  
+  
+        
+        v[i] = res % 10;  
+        carry = res / 10;  
+    }  
+    while (carry != 0)  
+    {  
+        v.Add(carry % 10);  
+        carry /= 10;  
+    }  
+}  
+  
+  
+static int findSumOfDigits(int n)  
+{  
+    v.Add(1);  
+    for (int i=1; i<=n; i++)  
+        multiply(i);  
+        int sum = 0;  
+    int size = v.Count;  
+    for (int i = 0 ; i < size ; i++)  
+        sum += (int)v[i];  
+    return sum;  
+}  
+  
+ 
+static void Main()  
+{  
+    int n = 1000;  
+    Console.WriteLine(findSumOfDigits(n));  
+}  
+} 
