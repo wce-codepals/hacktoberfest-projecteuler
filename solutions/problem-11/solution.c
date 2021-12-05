@@ -41,7 +41,7 @@ int main() {
                 max=s4;
             }
         }
-    printf("%.0lf",max);
+    printf("The greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20x20 grid is %.0lf",max);
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
     return 0;
