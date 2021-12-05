@@ -1,0 +1,23 @@
+m=0
+for n in range(1001):
+    if n%3 is 0:
+        m=m+n
+
+print("sum of multiples of 3 under 1000 is", m)
+
+k=0
+for n in range(1001):
+    if n%5 is 0:
+        k=k+n
+
+print("sum of multiples of 5 under 1000 is", k)
+
+u=0
+for n in range(1001):
+    if n%3 is 0:
+        u=u+n
+
+print("sum of multiples of 15 under 1000 is", u)
+
+answer=m+k-u
+print("answer is",answer)
